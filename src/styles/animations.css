@@ -1,0 +1,115 @@
+/* Quiet Quarters - Refined Animations */
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth appearance for text */
+@keyframes textReveal {
+  from {
+    opacity: 0;
+    letter-spacing: 0.5em;
+  }
+  to {
+    opacity: 1;
+    letter-spacing: 0.3em;
+  }
+}
+
+/* Subtle scale animation for images */
+@keyframes imageRise {
+  from {
+    opacity: 0.8;
+    transform: translateY(40px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent mobile menu scroll when open */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* Selection color */
+::selection {
+  background-color: #2F5C67;
+  color: #F6F4F1;
+}
+
+::-moz-selection {
+  background-color: #2F5C67;
+  color: #F6F4F1;
+}
+
+/* Remove default focus outline, add custom */
+*:focus-visible {
+  outline: 2px solid #2F5C67;
+  outline-offset: 4px;
+}
+
+/* Subtle transitions for interactive elements */
+a, button {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Image hover effects */
+img {
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Prevent layout shift */
+* {
+  box-sizing: border-box;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #E7E5E2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4A3A33;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2F5C67;
+}
+
+/* Mobile menu transitions */
+@media (max-width: 768px) {
+  .mobile-menu-enter {
+    animation: slideInFromTop 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @keyframes slideInFromTop {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
